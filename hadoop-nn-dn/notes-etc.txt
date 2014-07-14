@@ -1,0 +1,11 @@
+#RUN sed -i -r 's/DEFAULT_FORWARD_POLICY=.*/DEFAULT_FORWARD_POLICY="ACCEPT"/' /etc/default/ufw
+#RUN ufw reload
+
+#docker run -i -t --dns 127.0.0.1 -P --name master -h master.mycorp.kom alvinhenrick/serf
+#docker run -i -t -e JOIN_IP=172.17.0.64 --dns 127.0.0.1  -P --name slave1 -h slave1.mycorp.kom alvinhenrick/serf /bin/bash
+#docker run -i -t --dns 127.0.0.1 -e NODE_TYPE=s -P --name slave1 -h slave1.mycorp.kom alvinhenrick/hadoop-dn /bin/bash
+#docker run -i -t --dns 127.0.0.1 -e NODE_TYPE=m -e JOIN_IP=172.17.0.5 -P --name master -h master.mycorp.kom alvinhenrick/hadoop-nn-dn-1
+
+#CD HADOOP_INSTALL
+#hdfs dfs -mkdir -p /user/hduser/input
+#bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-2.3.0.jar grep input output 'dfs[a-z.]+'

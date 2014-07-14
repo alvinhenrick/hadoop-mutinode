@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "Starting serf"
+exec /etc/serf/start-serf-agent.sh
