@@ -32,7 +32,7 @@ RUN su hduser -c "cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys"
 ADD config/ssh_config ./ssh_config
 RUN mv ./ssh_config /home/hduser/.ssh/config
 
-RUN wget http://apache.mirror.anlx.net/hadoop/core/hadoop-2.3.0/hadoop-2.3.0-src.tar.gz 
+RUN wget https://archive.apache.org/dist/hadoop/core/hadoop-2.3.0/hadoop-2.3.0-src.tar.gz 
 RUN tar -xvf hadoop-2.3.0-src.tar.gz  
 
 
